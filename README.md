@@ -4,11 +4,11 @@ A Java Core application for processing bank transfer transactions from text file
 
 ## Features
 
-- **File Processing**: Parses `.txt` files from the `input/` directory
+- **File Processing**: Parses `.txt` files from the `input` directory
 - **Transaction Validation**: Validates account numbers (XXXXX-XXXXX format) and positive amounts  
 - **Balance Management**: Updates account balances after successful transfers
 - **Comprehensive Reporting**: Logs all operations with detailed error messages
-- **Automatic Archiving**: Moves processed files to `archive/` directory
+- **Automatic Archiving**: Moves processed files to `archive` directory
 - **User-Friendly Interface**: Console-based menu system
 
 ## Project Structure
@@ -48,14 +48,10 @@ XXXXX-XXXXX                      # Destination account
 3. Choose operation:
    - `1` - Process files from input
    - `2` - View transaction report
-
-## Example Output
-
-```
-2024-01-15 14:30:25 | file.txt | перевод с 12345-67890 на 98765-43210 100 | успешно обработан
-2024-01-15 14:30:25 | file.txt | перевод с 12345-67890 на 98765-43210 -50 | ошибка: неверная сумма
-```
-
+   - `3` - View report by dates
+   - `4` - View current accounts
+   - `5` - Exit
+     
 ## Error Handling
 
 - ❌ Invalid account numbers
@@ -69,3 +65,8 @@ XXXXX-XXXXX                      # Destination account
 - Java 8+
 - Proper file system permissions
 - Text files in specified format
+
+## Possible improvements
+- Database connection
+- Code optimization
+- Writing code according to SOLID principles

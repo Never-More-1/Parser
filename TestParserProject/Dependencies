@@ -1,0 +1,33 @@
+1. Main → Сервисы
+Main зависит от FileProcessor, ReportService, BankAccountManager
+
+Вызывает статические методы сервисов
+
+2. FileProcessor → Другие компоненты
+Зависит от BankAccountManager для работы со счетами
+
+Зависит от ValidationService для валидации данных
+
+Создает объекты Transaction
+
+Может выбрасывать FileProcessingException
+
+3. ValidationService → Исключения
+Выбрасывает специализированные исключения при ошибках валидации
+
+4. BankAccountManager → BankAccount
+Управляет коллекцией объектов BankAccount
+
+Обеспечивает persistence в файл
+
+5. ReportService → Transaction
+Обрабатывает объекты Transaction для генерации отчетов
+
+6. Слоистая архитектура
+Model: BankAccount, Transaction - данные
+
+Exception: Специализированные исключения
+
+Service: Бизнес-логика и утилиты
+
+Main: Точка входа и UI

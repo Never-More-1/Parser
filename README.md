@@ -25,7 +25,10 @@ src/
 │   ├── TransactionService.java
 │   └── FileParserService.java
 ├── exception/
-│   └── TransactionException.java
+│   ├── FileProcessingException.java
+│   ├── InsufficientFundsException.java
+│   ├── InvalidAccountException.java
+│   └── InvalidAmountException.java
 ├── util/
 │   └── ValidationUtil.java
 └── Main.java
@@ -38,7 +41,6 @@ Files must be `.txt` format with required fields:
 XXXXX-XXXXX                      # Source account
 XXXXX-XXXXX                      # Destination account  
 100                              # Transfer amount
-2024-01-15                       # Transaction date
 ```
 
 ## Usage
@@ -54,11 +56,11 @@ XXXXX-XXXXX                      # Destination account
      
 ## Error Handling
 
-- ❌ Invalid account numbers
-- ❌ Negative amounts  
-- ❌ Insufficient balance
-- ❌ Missing fields
-- ❌ Non-existent accounts
+- Invalid account numbers
+- Negative amounts  
+- Insufficient balance
+- Missing fields
+- Non-existent accounts
 
 ## Technical Requirements
 
